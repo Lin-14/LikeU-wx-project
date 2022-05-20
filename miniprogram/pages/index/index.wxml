@@ -1,18 +1,35 @@
 <!-- index.wxml -->
 <!-- 顶部 -->
-<nav-top back="{{false}}"></nav-top>
+<nav-top back="{{false}}" title="{{baseInfo.girlName + ' ❤ ' + baseInfo.boyName}}"></nav-top>
 <view class="container">
   <!-- 背景图 -->
   <image class="bgImg" src="../../images/bgImage/bgImage.jpeg" />
+  <!-- 在一起天数 -->
   <view class="box">
     <image class="girl" src="../../images/base/girl.png" />
     <view class="text-center">
       在一起已经
-      <view class="text-bold">
-        {{day}}天
-      </view>
+      <view class="text-bold">{{day}}天</view>
     </view>
     <image class="boy" src="../../images/base/boy.png" />
   </view>
-  
+  <view class="big-box">
+    <!-- 悄悄话 -->
+    <view class="top">
+      <image class="icon" src="../../images/base/message.png" mode="widthFix" />
+    </view>
+    <view class="middle">
+      <!-- 亲密度 -->
+      <image class="icon" src="../../images/base/love.png" mode="widthFix" />
+      <!-- 纪念日 -->
+      <view>
+        <image class="icon" src="../../images/base/datetime.png" mode="widthFix" />
+      </view>
+    </view>
+    <!-- 姨妈助手 -->
+    <view class="bottom">
+      <image class="icon" src="../../images/base/assistant.png" mode="widthFix" />
+    </view>    
+  </view>
+
 </view>

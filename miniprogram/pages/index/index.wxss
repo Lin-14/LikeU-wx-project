@@ -32,3 +32,18 @@ page {
 .boy {
   border: 1px skyblue solid;
 }
+.big-box {
+  margin-top: 100rpx;
+  width: 100%;
+}
+.top {
+
+}
+.middle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.icon {
+  width: 50rpx;
+}

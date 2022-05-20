@@ -17,10 +17,8 @@ App({
     const systemInfo = wx.getSystemInfoSync();
     // 胶囊按钮位置信息
     const menuButtonInfo = wx.getMenuButtonBoundingClientRect();
-
-    this.globalData = {
-      systemInfo,
-      menuButtonInfo,
-    };
+    wx.setStorageSync('systemInfo', systemInfo);
+    wx.setStorageSync('menuButtonInfo', menuButtonInfo);
+    this.globalData = {};
   }
 });

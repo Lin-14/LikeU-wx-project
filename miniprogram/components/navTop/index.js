@@ -2,11 +2,8 @@
 Component({
   lifetimes: {
     attached() {
-      var app = getApp();
-      const {
-        menuButtonInfo,
-        systemInfo
-      } = app.globalData;
+      var menuButtonInfo = wx.getStorageSync('menuButtonInfo');
+      var systemInfo = wx.getStorageSync('systemInfo');
       this.setData({
         navBarHeight: (menuButtonInfo.top - systemInfo.statusBarHeight) * 2 +
           menuButtonInfo.height + systemInfo.statusBarHeight

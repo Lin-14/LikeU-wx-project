@@ -3,7 +3,6 @@
     "pages/index/index",
     "pages/timeLine/index",
     "pages/mine/index",
-    "pages/getMiniProgramCode/index",
     "pages/uploadFile/index",
     "pages/updateRecord/index"
   ],

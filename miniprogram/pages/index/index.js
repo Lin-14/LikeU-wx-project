@@ -3,14 +3,14 @@ Page({
   data: {
     baseInfo: {
       bgImage: '',
-      boyName: '',
-      girlName: '',
+      boyName: '男生昵称',
+      girlName: '女生昵称',
       intimacy: '',
       painDay: '',
       together: '',
       userID: '',
     },
-    day: '',
+    day: '0',
   },
 
   onLoad() {
@@ -37,6 +37,7 @@ Page({
               day: _day
             })
           })
+          console.log(this.baseInfo);
         }
       })
   }
