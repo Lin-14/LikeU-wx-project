@@ -1,0 +1,7 @@
+<view class="CustomTopNav" style="height:{{navBarHeight}};">
+  <view class="CustomContent" style="margin-top:{{menuTop}};height:{{menuHeight}}">
+    <image wx:if="{{back && textColor == 'white'}}" class="icon" src="../../images/base/arrow_left_white.png"></image>
+    <image wx:if="{{back && textColor == 'gray'}}" class="icon" src="../../images/base/arrow_left.png"></image>
+    <view style="color:{{textColor}}">{{title}}</view>
+  </view>
+</view>

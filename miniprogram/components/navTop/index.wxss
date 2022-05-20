@@ -1,0 +1,18 @@
+/* components/navTop/index.wxss */
+.CustomTopNav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+.CustomContent {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon {
+  position: absolute;
+  left: 9px;
+  width: 18px;
+  height: 18px;
+}

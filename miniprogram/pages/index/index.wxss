@@ -1,0 +1,34 @@
+/**index.wxss**/
+
+page {
+  min-height: 100vh;
+}
+.bgImg {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.box {
+  margin-top: 100rpx;
+  padding: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 70rpx;
+  width: 400rpx;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.3);
+}
+.girl, .boy {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+.girl {
+  border: 1px pink solid;
+}
+.boy {
+  border: 1px skyblue solid;
+}

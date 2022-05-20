@@ -1,0 +1,18 @@
+<!-- index.wxml -->
+<!-- 顶部 -->
+<nav-top back="{{false}}"></nav-top>
+<view class="container">
+  <!-- 背景图 -->
+  <image class="bgImg" src="../../images/bgImage/bgImage.jpeg" />
+  <view class="box">
+    <image class="girl" src="../../images/base/girl.png" />
+    <view class="text-center">
+      在一起已经
+      <view class="text-bold">
+        {{day}}天
+      </view>
+    </view>
+    <image class="boy" src="../../images/base/boy.png" />
+  </view>
+  
+</view>

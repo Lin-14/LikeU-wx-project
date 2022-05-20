@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/timeLine/index",
+    "pages/mine/index",
+    "pages/getMiniProgramCode/index",
+    "pages/uploadFile/index",
+    "pages/updateRecord/index"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "HRX ❤ LYK",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#666",
+    "selectedColor": "#ee6ba7",
+    "backgroundColor": "#fff",
+    "borderStyle": "white",
+    "list": [{
+        "text": "首页",
+        "pagePath": "pages/index/index",
+        "iconPath": "images/base/index1.png",
+        "selectedIconPath": "images/base/index.png"
+      },
+      {
+        "text": "时光机",
+        "pagePath": "pages/timeLine/index",
+        "iconPath": "images/base/time1.png",
+        "selectedIconPath": "images/base/time.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/mine/index",
+        "iconPath": "images/base/mine1.png",
+        "selectedIconPath": "images/base/mine.png"
+      }
+    ],
+    "position": "bottom"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}
