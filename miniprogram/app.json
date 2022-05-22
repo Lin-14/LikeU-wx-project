@@ -1,10 +1,10 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/assistant/index",
     "pages/timeLine/index",
     "pages/mine/index",
-    "pages/uploadFile/index",
-    "pages/updateRecord/index"
+    "pages/uploadFile/index"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -25,10 +25,10 @@
         "selectedIconPath": "images/base/index.png"
       },
       {
-        "text": "时光机",
-        "pagePath": "pages/timeLine/index",
-        "iconPath": "images/base/time1.png",
-        "selectedIconPath": "images/base/time.png"
+        "text": "姨妈助手",
+        "pagePath": "pages/assistant/index",
+        "iconPath": "images/base/assistant1.png",
+        "selectedIconPath": "images/base/assistant.png"
       },
       {
         "text": "我的",

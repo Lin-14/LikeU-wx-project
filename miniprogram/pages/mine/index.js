@@ -1,26 +1,47 @@
+const db = wx.cloud.database();
+const { showLogin } = require('../../utils/showLogin.js')
 Page({
   data: {
-    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    name: '',
+    avatarUrl: '../../images/base/default.png',
+    userID: '',
   },
-
-
 
   onLoad() {
-    wx.getSetting({
-      success(res) {
-        if (res.authSetting['scope.userInfo']) {
-          // 已经授权，可以直接调用 getUserInfo 获取头像昵称
-          wx.getUserInfo({
-            success: function (res) {
-              console.log(res.userInfo)
-            }
-          })
-        }
-      }
+    let obj = wx.getStorageSync('user');
+    const { userID } = wx.getStorageSync('baseInfo');
+    this.setData({
+      userID,
     })
+    if(obj.name) {
+      this.setData({
+        name: obj.name
+      })
+    }
+    if(obj.avatarUrl) {
+      this.setData({
+        avatarUrl: obj.avatarUrl
+      })
+    }
   },
 
-  bindGetUserInfo(e) {
-    console.log(e.detail.userInfo)
-  }
+  onChooseAvatar(e) {
+    const { avatarUrl } = e.detail 
+    this.setData({
+      avatarUrl,
+    })
+    
+  },
+
+  save: function() {
+    let user = {
+      name: this.data.name,
+      avatarUrl: this.data.avatarUrl,
+    }
+    if(!this.data.userID) {
+      showLogin();
+    }
+    wx.setStorageSync('user', user);
+    db.collection('baseInfo')
+  },
 });

@@ -1,10 +1,12 @@
 <view class="container">
-  <!-- 如果只是展示用户头像昵称，可以使用 <open-data /> 组件 -->
-  <open-data type="userAvatarUrl"></open-data>
-  <open-data type="userNickName"></open-data>
-  <!-- 需要使用 button 来授权登录 -->
-  <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" type="primary">
-    授权登录
-  </button>
-  <view wx:else>请升级微信版本</view>
+  <view class="box mt20">
+    <button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+      <image class="avatar" mode="widthFix" src="{{avatarUrl}}"></image>
+    </button> 
+    <input type="nickname" value="{{name}}" class="weui-input" placeholder="请输入昵称"/>
+  </view>
+  <view class="box form mt20">
+    <view class="title">完善基本资料</view>
+  </view>
+  <button class="btn mt20" bindtap="save">保存</button>
 </view>

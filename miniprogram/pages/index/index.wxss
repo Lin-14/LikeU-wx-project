@@ -19,7 +19,7 @@ page {
   border-radius: 70rpx;
   width: 400rpx;
   color: #fff;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(0, 0, 0, 0.4);
 }
 .girl, .boy {
   width: 100rpx;
@@ -33,17 +33,52 @@ page {
   border: 1px skyblue solid;
 }
 .big-box {
-  margin-top: 100rpx;
+  margin-top: 250rpx;
+  padding-top: 150rpx;
+  padding-bottom: 150rpx;
   width: 100%;
+  position: relative;
+}
+.icon {
+  width: 60rpx;
+}
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  background-color: #fff;
 }
 .top {
-
+  position: absolute;
+  top: 0;
+  right: 10rpx;
 }
 .middle {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-right: 100rpx;
 }
-.icon {
-  width: 50rpx;
+.bottom {
+  position: absolute;
+  bottom: 0;
+  right: 10rpx;
+}
+.left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  width: 160rpx;
+  padding: 10rpx;
+  border-radius: 0 50rpx 50rpx 0;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+}
+.left image {
+  width: 70rpx;
 }

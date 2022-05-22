@@ -9,26 +9,35 @@
     <image class="girl" src="../../images/base/girl.png" />
     <view class="text-center">
       在一起已经
-      <view class="text-bold">{{day}}天</view>
+      <view class="text-bold text-large">{{day}}天</view>
     </view>
     <image class="boy" src="../../images/base/boy.png" />
   </view>
-  <view class="big-box">
+  <view class="big-box text-bold">
     <!-- 悄悄话 -->
-    <view class="top">
+    <view class="circle top" bindtap="goWhisper">
       <image class="icon" src="../../images/base/message.png" mode="widthFix" />
+      <view>悄悄话</view>
     </view>
     <view class="middle">
       <!-- 亲密度 -->
-      <image class="icon" src="../../images/base/love.png" mode="widthFix" />
+      <view class="left">
+        <view>
+          <view>亲密度</view>
+          <view>{{baseInfo.intimacy}}</view>
+        </view>
+        <image class="icon" src="../../images/base/love.png" mode="widthFix" />
+      </view>
       <!-- 纪念日 -->
-      <view>
+      <view class="circle" bindtap="goMemory">
         <image class="icon" src="../../images/base/datetime.png" mode="widthFix" />
+        <view>纪念日</view>
       </view>
     </view>
-    <!-- 姨妈助手 -->
-    <view class="bottom">
-      <image class="icon" src="../../images/base/assistant.png" mode="widthFix" />
+    <!-- 时光机 -->
+    <view class="circle bottom" bindtap="goTimeLine">
+      <image class="icon" src="../../images/base/time.png" mode="widthFix" />
+      <view>时光机</view>
     </view>    
   </view>
 

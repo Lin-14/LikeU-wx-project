@@ -1,0 +1,6 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "nav-top": "../../components/navTop/index"
+  }
+}

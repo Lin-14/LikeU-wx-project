@@ -1,1 +1,23 @@
 /**index.wxss**/
+page {
+  background-color: #ffa8f5;
+}
+.box {
+  display: flex;
+  align-items: center;
+  margin: 20rpx 20rpx 0 20rpx;
+  padding: 20rpx 30rpx;
+  background-color: rgba(255, 255, 255, .3);
+  border-radius: 25rpx;
+}
+.weui-input {
+  font-size: 20px;
+}
+.avatar {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 20rpx;
+}
+.form {
+  
+}
