@@ -21,7 +21,7 @@ button::after{
 }
 
 page {
-  background: #f6f6f6;
+  background: #ffa8f5;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -44,9 +44,15 @@ page {
 .text-large {
   font-size: 18px;
 }
+.text-white {
+  color: #fff;
+}
 .text-primary {
   color: #ff69b4;
 }
 .mt20 {
   margin-top: 20rpx;
+}
+.ml20 {
+  margin-left: 20rpx;
 }

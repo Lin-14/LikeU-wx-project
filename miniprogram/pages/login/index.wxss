@@ -1,0 +1,42 @@
+/* pages/login/index.wxss */
+page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+.container {
+  padding: 30rpx;
+  color: #fff;
+  background-color: rgba(255, 255, 255, .3);
+  border-radius: 18rpx;
+}
+.item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: large;
+  line-height: 2.5;
+  border-bottom: 1rpx solid rgba(255, 255, 255, .3);
+}
+text {
+  width: 200rpx;
+}
+.foot {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.btn {
+  flex: 1;
+}
+.signIn {
+  color: #ffa8f5;
+  background-color: #fff;
+}
+.login {
+  color: #fff;
+  background-color: #ffa8f5;
+}

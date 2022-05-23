@@ -2,11 +2,27 @@
   <view class="box mt20">
     <button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
       <image class="avatar" mode="widthFix" src="{{avatarUrl}}"></image>
-    </button> 
-    <input type="nickname" value="{{name}}" class="weui-input" placeholder="请输入昵称"/>
+    </button>
+    <input type="nickname" value="{{name}}" bindinput="onInput" class="weui-input" placeholder="请输入昵称" placeholder-style="color:#fff" />
   </view>
   <view class="box form mt20">
-    <view class="title">完善基本资料</view>
+    <view class="title">基本信息</view>
+    <view class="item">
+      <text>在一起日期：</text>
+      <picker mode="date" value="{{date}}" bindchange="bindDateChange">
+        <text wx:if="{{together}}">{{together}}</text>
+        <view wx:else class="picker">请选择</view>
+      </picker>
+    </view>
+    <view class="item">
+      <text>女生昵称：</text>
+      <input type="text" placeholder="请输入女生昵称" placeholder-style="color:#fff" model:value="{{girlName}}" bindinput="onInput" />
+    </view>
+    <view class="item">
+      <text>男生昵称：</text>
+      <input type="text" placeholder="请输入男生昵称" placeholder-style="color:#fff" model:value="{{boyName}}" bindinput="onInput" />
+    </view>
   </view>
   <button class="btn mt20" bindtap="save">保存</button>
+  <button wx:if="{{tourist}}" class="btn mt20" bindtap="toLogin">去登录</button>
 </view>

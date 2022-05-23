@@ -2,8 +2,9 @@
   "pages": [
     "pages/index/index",
     "pages/assistant/index",
-    "pages/timeLine/index",
     "pages/mine/index",
+    "pages/timeLine/index",
+    "pages/login/index",
     "pages/uploadFile/index"
   ],
   "window": {

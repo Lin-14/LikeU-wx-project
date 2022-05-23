@@ -10,5 +10,4 @@
   </view>
   <view class="button" bindtap="uploadImg" wx:if="{{!haveGetImgSrc}}">上传一张图片</view>
   <view class="button_clear" bindtap="clearImgSrc" wx:if="{{haveGetImgSrc}}">清空</view>
-  <view class="tip">在“资源管理器>miniprogram>pages>uploadFile>index.js”找到相应代码，体验该能力</view>
 </view>

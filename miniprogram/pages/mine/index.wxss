@@ -6,7 +6,9 @@ page {
   display: flex;
   align-items: center;
   margin: 20rpx 20rpx 0 20rpx;
+  width: calc(100% - 100rpx);
   padding: 20rpx 30rpx;
+  color: #fff;
   background-color: rgba(255, 255, 255, .3);
   border-radius: 25rpx;
 }
@@ -19,5 +21,21 @@ page {
   border-radius: 20rpx;
 }
 .form {
-  
+  flex-wrap: wrap;
+  font-size: large;
+  line-height: 2;
+}
+.title {
+  width: 100%;
+  text-align: center;
+}
+.item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx solid rgba(255, 255, 255, .3);
+}
+.item input {
+  text-align: right;
 }

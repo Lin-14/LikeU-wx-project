@@ -1,0 +1,16 @@
+<!-- pages/login/index.wxml -->
+<view class="text-white">情侣共用同个账号哦~</view>
+<view class="container mt20">
+  <view class="item">
+    <text>账户名</text>
+    <input type="text" placeholder="请输入账户名" placeholder-style="color:#fff" bindinput="onInput" model:value="{{userID}}" />
+  </view>
+  <view class="item">
+    <text>账户密码</text>
+    <input type="text" placeholder="请输入账户密码" placeholder-style="color:#fff" bindinput="onInput" model:value="{{userPWD}}" password />
+  </view>
+  <view class="foot mt20">
+    <view class="btn signIn" bindtap="signIn">注册</view>
+    <view class="btn login ml20" bindtap="login">登录</view>
+  </view>
+</view>
