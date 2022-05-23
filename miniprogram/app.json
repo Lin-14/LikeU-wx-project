@@ -5,7 +5,8 @@
     "pages/mine/index",
     "pages/timeLine/index",
     "pages/login/index",
-    "pages/uploadFile/index"
+    "pages/uploadFile/index",
+    "pages/edit/index"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -19,7 +20,8 @@
     "selectedColor": "#ee6ba7",
     "backgroundColor": "#fff",
     "borderStyle": "white",
-    "list": [{
+    "list": [
+      {
         "text": "首页",
         "pagePath": "pages/index/index",
         "iconPath": "images/base/index1.png",

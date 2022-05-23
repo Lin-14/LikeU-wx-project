@@ -56,3 +56,6 @@ page {
 .ml20 {
   margin-left: 20rpx;
 }
+.mr20 {
+  margin-right: 10rpx;
+}
