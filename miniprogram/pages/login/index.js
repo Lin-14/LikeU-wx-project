@@ -73,6 +73,7 @@ Page({
           wx.showToast({
             title: '登陆成功',
           });
+          wx.setStorageSync('userID', this.data.userID)
           // 查询信息并保存
           db.collection('baseInfo')
             .where({
