@@ -1,7 +1,14 @@
-.form {
-  flex-wrap: wrap;
+.container {
+  margin-top: 180rpx;
   font-size: large;
-  line-height: 2;
+  color: #fff;
+}
+.form {
+  width: 78%;
+  line-height: 2.5;
+  padding: 20rpx 30rpx;
+  border-radius: 18rpx;
+  background-color: rgba(255, 255, 255, .3);
 }
 .title {
   width: 100%;
@@ -16,4 +23,8 @@
 }
 .item input {
   text-align: right;
+}
+.btn {
+  margin-top: 100rpx;
+  width: 50%;
 }

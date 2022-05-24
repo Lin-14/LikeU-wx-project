@@ -1,34 +1,40 @@
-// pages/edit/index.js
+const db = wx.cloud.database();
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    userID: '',
+    date: '',
+    together: '',
+    girlName: '',
+    boyName: '',
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad(options) {
-
+    let userID = wx.getStorageSync('userID');
+    this.setData({
+      userID
+    });
+    this.getInfo();
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
   onReady() {
-
+    wx.setNavigationBarTitle({
+      title: '编辑信息'
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
   onShow() {
-
+    const {
+      together,
+      girlName,
+      boyName
+    } = wx.getStorageSync('baseInfo');
+    this.setData({
+      together,
+      boyName,
+      girlName
+    });
   },
-  
+
   getInfo() { // 根据本地存储的账号id查信息
     db.collection('baseInfo')
       .where({
@@ -56,22 +62,15 @@ Page({
         }
       })
   },
-  
+
   bindDateChange(e) { // 日期选择
     this.setData({
       together: e.detail.value
     })
   },
 
-  save: function () { // 保存
-    let user = {
-      name: this.data.name,
-      avatarUrl: this.data.avatarUrl,
-    }
-    wx.setStorageSync('user', user);
-    if (!this.data.userID) {
-      showLogin();
-    }
+  save() { // 保存
+    wx.showLoading();
     db.collection('baseInfo')
       .where({
         userID: this.data.userID
@@ -83,6 +82,7 @@ Page({
           girlName: this.data.girlName
         },
         success: res => {
+          wx.hideLoading();
           wx.showToast({
             title: '保存成功'
           });
@@ -90,4 +90,5 @@ Page({
         }
       })
   },
+  onInput() {},
 })

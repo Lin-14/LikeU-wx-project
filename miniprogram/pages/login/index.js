@@ -81,13 +81,13 @@ Page({
             .get({
               success: (res) => {
                 let _res = res.data[0];
-                if (!_res) {
+                if (!_res.together) {
                   wx.showToast({
                     title: '请填写基础信息',
                   })
                   setTimeout(() => {
                     wx.switchTab({
-                      url: '/pages/mine/index'
+                      url: '/pages/edit/index'
                     })
                   }, 500);
                 } else {

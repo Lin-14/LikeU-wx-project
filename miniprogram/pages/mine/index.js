@@ -36,7 +36,7 @@ Page({
       showLogin();
     } else {
       wx.navigateTo({
-        url: '/pages/changeBg/index'
+        url: '/pages/uploadFile/index'
       })
     }
   },

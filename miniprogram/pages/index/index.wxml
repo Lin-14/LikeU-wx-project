@@ -3,7 +3,7 @@
 <nav-top back="{{false}}" title="{{baseInfo.girlName + ' ❤ ' + baseInfo.boyName}}"></nav-top>
 <view class="container">
   <!-- 背景图 -->
-  <image class="bgImg" src="../../images/bgImage/bgImage.jpeg" />
+  <image class="bgImg" src="{{bgImage}}" />
   <!-- 在一起天数 -->
   <view class="box">
     <image class="girl" src="../../images/base/girl.png" />

@@ -1,8 +1,8 @@
 <view>
   <nav-top back="{{false}}" title="姨妈助手"></nav-top>
   <view class="container text-large">
-    <image class="bgImg" src="../../images/bgImage/bgImage.jpeg" />
-    <view style="margin-top:200rpx">
+    <image class="bgImg" src="{{bgImage}}" />
+    <view style="margin-top:30vh">
       上次姨妈时间：
       <text class="text-primary">{{lastTime}}</text>
     </view>
@@ -12,8 +12,8 @@
     </view>
     <view class="section mt20">
       <view class="section__title text-center mt20"></view>
-      <picker mode="date" value="{{date}}" start="2022-05-16" bindchange="bindDateChange">
-        <view class="picker">更新姨妈时间</view>
+      <picker mode="date" value="{{date}}" start="2022-05-15" bindchange="bindDateChange">
+        <view class="picker">设置姨妈时间</view>
       </picker>
     </view>
   </view>
