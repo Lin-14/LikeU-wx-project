@@ -11,41 +11,6 @@
           "query": "",
           "launchMode": "default",
           "scene": null
-        },
-        {
-          "name": "编辑信息",
-          "pathName": "pages/edit/index",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "上传壁纸",
-          "pathName": "pages/uploadFile/index",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "时光机",
-          "pathName": "pages/timeLine/index",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "添加记录",
-          "pathName": "pages/addTimeLine/index",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "碎碎念",
-          "pathName": "pages/whisper/index",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
         }
       ]
     }

@@ -13,15 +13,13 @@ Page({
     this.setData({
       userID
     });
-  },
-
-  onShow() {
     let T = new Date();
     let date = `${T.getFullYear()}-${T.getMonth() + 1}-${T.getDate()}`;
     this.setData({
       date
     });
   },
+
   bindDateChange(e) { // 日期选择
     this.setData({
       date: e.detail.value
