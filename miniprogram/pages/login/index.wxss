@@ -33,10 +33,10 @@ text {
   flex: 1;
 }
 .signIn {
-  color: #ffa8f5;
+  color: #eb9cc6;
   background-color: #fff;
 }
 .login {
   color: #fff;
-  background-color: #ffa8f5;
+  background-color: #eb9cc6;
 }

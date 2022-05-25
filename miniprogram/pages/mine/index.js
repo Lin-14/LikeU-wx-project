@@ -6,22 +6,28 @@ Page({
     userID: '',
   },
 
-  onLoad() {
+  onShow() {
     let name = wx.getStorageSync('name');
-    if(name) {
-      this.setData({ name })
+    if (name) {
+      this.setData({
+        name
+      })
     }
     let avatarUrl = wx.getStorageSync('avatarUrl');
-    if(avatarUrl) {
-      this.setData({ avatarUrl })
+    if (avatarUrl) {
+      this.setData({
+        avatarUrl
+      })
     }
     let userID = wx.getStorageSync('userID');
     if (userID) {
-      this.setData({ userID })
+      this.setData({
+        userID
+      })
     }
   },
   goEdit() {
-    if(!this.data.userID) {
+    if (!this.data.userID) {
       showLogin();
     } else {
       wx.navigateTo({
@@ -30,7 +36,7 @@ Page({
     }
   },
   goChangeBg() {
-    if(!this.data.userID) {
+    if (!this.data.userID) {
       showLogin();
     } else {
       wx.navigateTo({
@@ -43,7 +49,9 @@ Page({
     const {
       avatarUrl
     } = e.detail
-    this.setData({ avatarUrl })
+    this.setData({
+      avatarUrl
+    })
     wx.setStorageSync('avatarUrl', avatarUrl)
   },
 
@@ -51,5 +59,5 @@ Page({
     console.log(e);
     wx.setStorageSync('name', e.detail.value)
   },
-  
+
 });

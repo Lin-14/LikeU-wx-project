@@ -13,7 +13,7 @@ Page({
       userID: '',
     },
     day: '0',
-    bgImage: '',
+    bgImage: '../../images/bgImage/bgImage.jpeg',
   },
   onLoad() {
     let baseInfo = wx.getStorageSync('baseInfo') || {};
@@ -58,6 +58,7 @@ Page({
             })
           }
           wx.setStorageSync('baseInfo', _res)
+          console.log(_res);
         }
       })
   },
