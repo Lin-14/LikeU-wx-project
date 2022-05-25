@@ -1,5 +1,5 @@
 {
-  "navigationStyle": "custom",
+  "navigationBarTitleText": "姨妈助手",
   "usingComponents": {
     "nav-top": "../../components/navTop/index"
   }

@@ -43,19 +43,20 @@ page {
   width: 60rpx;
 }
 .circle {
+  padding-left: 10rpx;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 150rpx;
   height: 150rpx;
-  border-radius: 50%;
+  border-radius: 50% 0 0 50%;
   background-color: #fff;
 }
 .top {
   position: absolute;
-  top: 0;
-  right: 10rpx;
+  top: 10rpx;
+  right: 0;
 }
 .middle {
   display: flex;
@@ -65,8 +66,8 @@ page {
 }
 .bottom {
   position: absolute;
-  bottom: 0;
-  right: 10rpx;
+  bottom: 10rpx;
+  right: 0;
 }
 .left {
   display: flex;

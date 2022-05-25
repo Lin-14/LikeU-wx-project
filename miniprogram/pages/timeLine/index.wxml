@@ -1,2 +1,14 @@
-<!--pages/timeLine/index.wxml-->
-<text>pages/timeLine/index.wxml</text>
+<view class="container">
+  <view class="card" wx:for="{{dataList}}" wx:key="_id">
+    <view class="box">
+      <view class="title">{{item.title}}</view>
+      <view class="content">{{item.content}}</view>
+      <view class="date text-gray">{{item.date}}</view>
+    </view>
+    <image src="{{item.image}}" mode="aspectFill" class="image"></image>
+  </view>
+  <view class="card add" bindtap="goAdd">
+    <image src="../../images/base/add.png" mode="widthFix"></image>
+    <view class="ml20">添加</view>
+  </view>
+</view>

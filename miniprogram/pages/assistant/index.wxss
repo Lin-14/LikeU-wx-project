@@ -1,18 +1,30 @@
 page {
   min-height: 100vh;
 }
-.bgImg {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
+.box {
+  position: absolute;
+  font-size: 20px;
+  box-sizing: border-box;
+  width: calc(100% - 40rpx);
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20rpx;
+  padding: 50rpx 0;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 20rpx;
 }
 view {
   color: #fff;
 }
 .picker {
   color: #ff69b4;
+  width: 300rpx;
+  text-align: center;
   padding: 18rpx 30rpx;
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 8rpx;

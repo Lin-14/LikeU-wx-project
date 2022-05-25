@@ -16,6 +16,4 @@ const showLogin = function () {
   })
 }
 
-module.exports = {
-  showLogin,
-}
+module.exports = showLogin;

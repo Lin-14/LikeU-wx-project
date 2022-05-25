@@ -1,0 +1,26 @@
+<view class="container">
+  <view class="form mt20">
+    <view class="item">
+      <text class="text-gray">标题：</text>
+      <input type="text" placeholder="请输入标题" maxlength="12" placeholder-style="color:#fff" model:value="{{title}}" bindinput="onInput" />
+    </view>
+    <view class="item">
+      <text class="text-gray">日期：</text>
+      <picker mode="date" value="{{date}}" bindchange="bindDateChange">
+        <text>{{date}}</text>
+      </picker>
+    </view>
+    <view>
+      <text class="text-gray">内容：</text>
+      <textarea type="text" placeholder="请输入内容，最多50个字符" maxlength="50" placeholder-style="color:#fff" model:value="{{content}}" bindinput="onInput" />
+    </view>
+    <view>
+      <view class="text-gray">图片：</view>
+      <view class="box">
+        <image class="code_img" mode="aspectFill" wx:if="{{image}}" src="{{image}}"></image>
+        <image class="add_img" src="../../images/base/addImg.png" bindtap="uploadImg" wx:if="{{!image}}"></image>
+      </view>
+    </view>
+  </view>
+  <view class="btn" bindtap="save">提交</view>
+</view>

@@ -28,3 +28,6 @@
   margin-top: 100rpx;
   width: 50%;
 }
+input {
+  width: 300rpx;
+}

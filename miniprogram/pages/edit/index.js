@@ -16,12 +16,6 @@ Page({
     this.getInfo();
   },
 
-  onReady() {
-    wx.setNavigationBarTitle({
-      title: '编辑信息'
-    })
-  },
-
   onShow() {
     const {
       together,

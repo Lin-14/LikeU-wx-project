@@ -14,20 +14,22 @@ Page({
   },
 
   uploadImg() {
-    wx.showLoading();
     // 让用户选择一张图片
     wx.chooseImage({
       count: 1,
       success: chooseResult => {
         // 将图片上传至云存储空间
+        wx.showLoading({
+          title: '上传中'
+        });
         const name = new Date().getTime();
         wx.cloud.uploadFile({
-          // 指定上传到的云路径
           cloudPath: `${name}-bg.png`,
-          // 指定要上传的文件的小程序临时文件路径
           filePath: chooseResult.tempFilePaths[0]
         }).then(res => {
-          console.log(res.fileID);
+          wx.showToast({
+            title: '上传成功'
+          });
           this.setData({
             haveGetImgSrc: true,
             imgSrc: res.fileID

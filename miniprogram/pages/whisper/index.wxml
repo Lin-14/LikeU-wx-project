@@ -1,0 +1,10 @@
+<view class="container">
+  <view class="card" wx:for="{{dataList}}" wx:key="_id">
+    <view class="content">{{item.content}}</view>
+    <view class="date text-gray">{{item.date}}</view>
+  </view>
+  <view class="card add" bindtap="addPopup">
+    <image src="../../images/base/add.png" mode="widthFix"></image>
+    <view class="ml20">添加</view>
+  </view>
+</view>

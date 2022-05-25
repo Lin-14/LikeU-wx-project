@@ -1,7 +1,5 @@
 const db = wx.cloud.database();
-const {
-  showLogin
-} = require('../../utils/showLogin.js')
+const showLogin = require('../../utils/showLogin.js')
 Page({
   data: {
     lastTime: "未设置",

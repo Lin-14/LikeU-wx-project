@@ -1,0 +1,47 @@
+.container {
+  margin: 50rpx 0;
+  font-size: large;
+  color: #fff;
+}
+.form {
+  width: 80%;
+  line-height: 2.5;
+  padding: 20rpx 30rpx;
+  border-radius: 18rpx;
+  background-color: rgba(255, 255, 255, .3);
+}
+.item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx solid rgba(255, 255, 255, .3);
+}
+.box {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50rpx;
+}
+.code_img {
+  width: 250rpx;
+  height: 250rpx;
+  border-radius: 20rpx;
+}
+.add_img{
+  width: 80rpx;
+  height: 80rpx;
+}
+.item input {
+  text-align: right;
+}
+.btn {
+  margin-top: 100rpx;
+  width: 50%;
+}
+input {
+  width: 300rpx;
+}
+textarea {
+  line-height: 1.5;
+  height: 250rpx;
+}

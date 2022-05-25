@@ -1,6 +1,4 @@
-const {
-  showLogin
-} = require('../../utils/showLogin.js')
+const showLogin = require('../../utils/showLogin.js')
 Page({
   data: {
     name: '',

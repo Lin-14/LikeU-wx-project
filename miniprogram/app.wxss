@@ -21,7 +21,7 @@ button::after{
 }
 
 page {
-  background: #ffa8f5;
+  background: #dc94ba;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -35,6 +35,15 @@ page {
   background: #fff;
   color: #ff69b4;
 }
+.bgImgS {
+  position: fixed;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  opacity: .65;
+}
 .text-bold {
   font-weight: bold;
 }
@@ -46,6 +55,9 @@ page {
 }
 .text-white {
   color: #fff;
+}
+.text-gray {
+  color: #666;
 }
 .text-primary {
   color: #ff69b4;

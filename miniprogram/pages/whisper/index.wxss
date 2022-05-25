@@ -1,0 +1,33 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: calc(100% - 40rpx);
+  height: 150rpx;
+  margin: 20rpx 20rpx 0 20rpx;
+  padding: 28rpx;
+  color: #ee6ba7;
+  background-color: rgb(255, 236, 243);
+  border-radius: 20rpx;
+}
+.content {
+  color: #333;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+.add {
+  flex-direction: row;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.add image {
+  width: 70rpx;
+}
+.card:last-child {
+  margin-bottom: 20rpx;
+}

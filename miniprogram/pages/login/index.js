@@ -9,9 +9,6 @@ Page({
   onLoad(options) {},
 
   onReady() {
-    wx.setNavigationBarTitle({
-      title: '注册登录'
-    })
   },
 
   onShow() {},

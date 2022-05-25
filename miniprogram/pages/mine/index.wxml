@@ -1,4 +1,5 @@
 <view class="container">
+  <image class="bgImgS" mode="widthFix" src="../../images/bgImage/heart.png" />
   <view class="box mt20">
     <button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
       <image class="avatar" mode="widthFix" src="{{avatarUrl}}"></image>

@@ -1,12 +1,10 @@
 const db = wx.cloud.database();
 const _ = db.command;
-const {
-  showLogin
-} = require('../../utils/showLogin.js')
+const showLogin = require('../../utils/showLogin.js')
 Page({
   data: {
     baseInfo: {
-      bgImage: '../../images/bgImage/bgImage.jpeg',
+      bgImage: '',
       boyName: '男生昵称',
       girlName: '女生昵称',
       intimacy: 0,
@@ -15,14 +13,21 @@ Page({
       userID: '',
     },
     day: '0',
-    bgImage: '../../images/bgImage/bgImage.jpeg',
+    bgImage: '',
   },
   onLoad() {
     let baseInfo = wx.getStorageSync('baseInfo') || {};
     this.setData({
       baseInfo
     }, this.getDay);
+    // 设置背景图
+    if (baseInfo.bgImage) {
+      this.setData({
+        bgImage: baseInfo.bgImage
+      })
+    }
     let userID = wx.getStorageSync('userID');
+    // 增加亲密度
     if (userID) {
       db.collection('baseInfo')
         .where({
@@ -62,6 +67,7 @@ Page({
     this.setData({
       baseInfo
     }, this.getDay);
+    // 设置背景图
     if (baseInfo.bgImage) {
       this.setData({
         bgImage: baseInfo.bgImage
@@ -69,32 +75,32 @@ Page({
     }
   },
 
-  goWhisper: function () {
+  goWhisper: function () { // 碎碎念
     if (!this.data.baseInfo.userID) {
       showLogin();
     } else {
       wx.navigateTo({
-        url: '',
+        url: '/pages/whisper/index',
       })
     }
   },
 
-  goMemory: function () {
+  goMemory: function () { // 纪念日
     if (!this.data.baseInfo.userID) {
       showLogin();
     } else {
       wx.navigateTo({
-        url: '',
+        url: '/pages/memory/index',
       })
     }
   },
 
-  goTimeLine: function () {
+  goTimeLine: function () { // 时光机
     if (!this.data.baseInfo.userID) {
       showLogin();
     } else {
       wx.navigateTo({
-        url: '',
+        url: '/pages/timeLine/index',
       })
     }
   },
