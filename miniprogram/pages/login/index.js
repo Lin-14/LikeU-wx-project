@@ -8,12 +8,19 @@ Page({
 
   onLoad(options) {},
 
-  onReady() {
-  },
+  onReady() {},
 
   onShow() {},
 
   signIn() {
+    // 判断是否为空
+    if (!this.data.userID || !this.data.userPWD) {
+      wx.showToast({
+        icon: 'none',
+        title: '账户名或密码不能为空'
+      });
+      return;
+    }
     // 查询账户是否存在
     wx.cloud.database().collection('userList').where({
       userID: this.data.userID,
@@ -26,7 +33,6 @@ Page({
           })
           return
         }
-        // 不存在，可以注册账户
         wx.cloud.database().collection('userList').add({
           data: {
             userID: this.data.userID,
