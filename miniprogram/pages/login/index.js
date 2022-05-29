@@ -22,10 +22,12 @@ Page({
       return;
     }
     // 查询账户是否存在
+    wx.showLoading();
     wx.cloud.database().collection('userList').where({
       userID: this.data.userID,
     }).get({
       success: res => {
+        wx.hideLoading();
         let user = res.data[0];
         if (user != undefined) {
           wx.showToast({
@@ -61,14 +63,17 @@ Page({
   },
 
   login() {
+    wx.showLoading();
     wx.cloud.database().collection('userList').where({
       //先是查询用户名是否存在
       userID: this.data.userID
     }).get({
       success: res => {
+        wx.hideLoading();
         let user = res.data[0]
         if (!user) {
           wx.showToast({
+            icon: 'error',
             title: "请先注册",
           })
         }
