@@ -1,6 +1,6 @@
 <!-- index.wxml -->
 <!-- 顶部 -->
-<nav-top back="{{false}}" title="{{baseInfo.girlName + ' ❤ ' + baseInfo.boyName}}"></nav-top>
+<nav-top back="{{false}}" title="{{baseInfo.girlName || '女生昵称'}} ❤ {{baseInfo.boyName || '男生昵称'}}"></nav-top>
 <view class="container">
   <!-- 背景图 -->
   <image class="bgImg" src="{{bgImage}}" />
