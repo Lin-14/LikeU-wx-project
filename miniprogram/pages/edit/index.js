@@ -81,6 +81,11 @@ Page({
             title: '保存成功'
           });
           this.getInfo();
+          setTimeout(() => {
+            wx.navigateBack({
+              delta: 1
+            });
+          },1000)
         }
       })
   },
