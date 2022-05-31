@@ -21,7 +21,8 @@ button::after{
 }
 
 page {
-  background: #dc94ba;
+  /* background: #dc94ba; */
+  background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

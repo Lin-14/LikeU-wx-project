@@ -45,7 +45,7 @@ Page({
               },
               success: res => {
                 wx.showToast({
-                  title: '设置成功'
+                  title: '新壁纸设置成功'
                 });
               }
             })

@@ -31,6 +31,7 @@ Page({
         let user = res.data[0];
         if (user != undefined) {
           wx.showToast({
+            icon: 'error',
             title: '该账户已注册',
           })
           return
@@ -42,7 +43,6 @@ Page({
           },
           success: res => {
             wx.showToast({
-              icon: 'none',
               title: '注册成功，去填写信息',
             })
             db.collection('baseInfo').add({
