@@ -76,6 +76,13 @@ Page({
     }
   },
 
+  onShareAppMessage() {
+    return {
+      title: "LikeU情侣恋爱日记",
+      path: `/${getUrl.getCurrentPageUrlWithArgs()}`
+    };
+  },
+
   goWhisper: function () { // 碎碎念
     if (!this.data.baseInfo.userID) {
       showLogin();
