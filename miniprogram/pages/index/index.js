@@ -21,9 +21,10 @@ Page({
       baseInfo
     }, this.getDay);
     // 设置背景图
-    if (baseInfo.bgImage) {
+    let bg = wx.getStorageSync('bgImage');
+    if (bg) {
       this.setData({
-        bgImage: baseInfo.bgImage
+        bgImage: bg
       })
     }
     let userID = wx.getStorageSync('userID');
@@ -52,15 +53,28 @@ Page({
           this.setData({
             baseInfo: _res,
           })
-          if (_res.bgImage) {
-            this.setData({
-              bgImage: _res.bgImage
-            })
-          }
-          wx.setStorageSync('baseInfo', _res)
-          console.log(_res);
+          wx.setStorageSync('baseInfo', _res);
         }
       })
+    // 如有更新则更新本地背景图
+    wx.cloud.downloadFile({
+      fileID: baseInfo.bgImage,
+      success: res => {
+        // 转换图片格式为base64
+        wx.getFileSystemManager().readFile({
+          filePath: res.tempFilePath,
+          encoding: 'base64',
+          success: res => {
+            let bgImage = wx.getStorageSync('bgImage');
+            bgImage = 'data:image/png;base64,' + res.data;
+            wx.setStorageSync('bgImage', bgImage);
+            this.setData({
+              bgImage
+            })
+          }
+        })
+      }
+    })
   },
 
   onShow() {
@@ -69,9 +83,10 @@ Page({
       baseInfo
     }, this.getDay);
     // 设置背景图
-    if (baseInfo.bgImage) {
+    let bg = wx.getStorageSync('bgImage');
+    if (bg) {
       this.setData({
-        bgImage: baseInfo.bgImage
+        bgImage: bg
       })
     }
   },

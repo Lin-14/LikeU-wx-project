@@ -66,10 +66,22 @@ Page({
   },
 
   updataBg(res) {
-    // 更改本地
-    console.log('更改本地数据');
-    let baseInfo = wx.getStorageSync('baseInfo');
-    baseInfo.bgImage = res;
-    wx.setStorageSync('baseInfo', baseInfo);
-  }
+    // 下载图片
+    wx.cloud.downloadFile({
+      fileID: res,
+      success(res) {
+        // 转换图片格式为base64
+        wx.getFileSystemManager().readFile({
+          filePath: res.tempFilePath, //选择图片返回的相对路径
+          encoding: 'base64', //编码格式
+          success: res => { //成功的回调
+            // 保存本地
+            let bgImage = wx.getStorageSync('bgImage');
+            bgImage = 'data:image/png;base64,' + res.data;
+            wx.setStorageSync('bgImage', bgImage);
+          }
+        })
+      }
+    })
+  },
 });

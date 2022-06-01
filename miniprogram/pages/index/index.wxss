@@ -51,7 +51,7 @@ page {
   width: 150rpx;
   height: 150rpx;
   border-radius: 50% 0 0 50%;
-  background-color: #fff;
+  background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
 }
 .top {
   position: absolute;
